@@ -13,6 +13,7 @@ import NetInfo from '@react-native-community/netinfo';
 import { fetchNewsArticles } from '../../utils/api';
 import { storeArticles, getStoredArticles } from '../../services/storageService';
 import ArticleCard from '../../component/ArticleCard';
+import Header from '../../component/Header';
 
 const {height, width} = Dimensions.get("screen");
 const HomeScreen = ({navigation}) => {
@@ -75,7 +76,11 @@ const HomeScreen = ({navigation}) => {
   }, [page]);
 
   return (
+    <>
+    
     <View style={styles.container}>
+
+      <Header />
       <TextInput
         style={styles.searchBar}
         placeholder="Search news..."
@@ -115,6 +120,7 @@ const HomeScreen = ({navigation}) => {
         </Text>
       )}
     </View>
+    </>
   );
 };
 

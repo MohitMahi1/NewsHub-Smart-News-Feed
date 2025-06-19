@@ -10,7 +10,7 @@ const Navigation = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name='NewsHub' component={HomeScreen} />
+        <Stack.Screen name='NewsHub' component={HomeScreen} options={{headerShown:false}} />
         <Stack.Screen name="NewsDetail" component={NewsDetailScreen} options={{ title: "News Detail" }} />
       </Stack.Navigator>
     </NavigationContainer>
